@@ -2,17 +2,17 @@
 version: '3'
 services:
   p4p:
-    image: ghcr.io/yaegashi/p4p-docker/p4p
+    image: ghcr.io/cerebralfix/p4p-docker/
     build: docker
     # P4P command line options
     # https://www.perforce.com/manuals/p4sag/Content/P4SAG/chapter.proxy.html
-    command: -v proxy.monitor.level=0
+    command: -v proxy.monitor.level=0 -e 500000 -v net.tcpsize=2000000 -v filesys.bufsize=2000000
     # P4P Environment variables
     # https://www.perforce.com/manuals/cmdref/Content/CmdRef/envars.html
     environment:
       P4TARGET: perforce:1666
       P4DEBUG: server=1
     volumes:
-      - ./data:/data
+      - perforceproxy:/data
     ports:
       - 127.0.0.1:1666:1666
