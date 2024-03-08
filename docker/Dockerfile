@@ -16,4 +16,5 @@ ENV P4PORT=ssl:1666
 VOLUME /data
 EXPOSE 1666
 COPY entrypoint.sh /
+RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
