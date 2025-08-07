@@ -11,7 +11,7 @@ permissions:
   packages: write
 env:
   REGISTRY: ghcr.io
-  IMAGE: "${{github.repository}}"
+  IMAGE: "${{github.repository}}/p4p"
   P4REL: r25.1
 jobs:
   build:
