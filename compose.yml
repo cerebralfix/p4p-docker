@@ -1,6 +1,6 @@
 services:
   p4p:
-    image: ghcr.io/cerebralfix/p4p-docker/
+    image: ghcr.io/cerebralfix/p4p-docker
     build:
       context: docker
       args:
@@ -11,13 +11,13 @@ services:
     # P4P Environment variables
     # https://www.perforce.com/manuals/cmdref/Content/CmdRef/envars.html
     environment:
-      TZ: Asia/Tokyo
+      TZ: Pacific/Auckland
       P4DEBUG: server=1
       P4PORT: ssl:1666
       P4TARGET: ssl:target-server:1666
     ports:
-      - 1666:1666
+      - 1666:1666/tcp
     volumes:
-      - ./data:/data
-    ports:
-      - 127.0.0.1:1666:1666
+      - perforceproxy:/data
+volumes:
+  perforceproxy:

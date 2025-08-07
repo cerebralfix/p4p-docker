@@ -2,7 +2,7 @@ FROM debian:bookworm-slim
 LABEL org.opencontainers.image.source=https://github.com/yaegashi/p4p-docker
 LABEL org.opencontainers.image.description="Helix Core Proxy Server (P4P)"
 LABEL org.opencontainers.image.licenses="LicenseRef-Proprietary https://www.perforce.com/license-agreements"
-ARG P4REL=r24.2
+ARG P4REL=r25.1
 RUN apt-get update && apt-get dist-upgrade -y && apt-get install -y apt-utils curl gosu
 RUN adduser --system --group --uid 1000 p4
 RUN curl -sL http://www.perforce.com/downloads/perforce/$P4REL/bin.linux26$(uname -m)/p4 -o /usr/local/bin/p4
