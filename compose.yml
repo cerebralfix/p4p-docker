@@ -4,7 +4,7 @@ services:
     build:
       context: docker
       args:
-        P4REL: r24.2
+        P4REL: r25.1
     # P4P command line options
     # https://www.perforce.com/manuals/p4sag/Content/P4SAG/chapter.proxy.html
     command: -v proxy.monitor.level=0 -e 500000 -v net.tcpsize=2000000 -v filesys.bufsize=2000000

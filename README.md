@@ -9,7 +9,7 @@ The container includes the following executable binaries from the Perforce distr
 - [Helix Core Proxy Server (P4P)](https://www.perforce.com/downloads/helix-core-proxy-server-p4p)
 - [Helix Command-Line Client (P4)](https://www.perforce.com/downloads/helix-command-line-client-p4)
 
-The container images are published at `ghcr.io/yaegashi/p4p-docker/p4p`.
+The container images are published at `ghcr.io/cerebralfix/p4p-docker`.
 
 It supports linux/amd64 and linux/arm64 platforms starting from the r24.2 release.
 
@@ -21,7 +21,7 @@ with compose.yml like the following:
 ```yaml
 services:
   p4p:
-    image: ghcr.io/yaegashi/p4p-docker/p4p:r24.2
+    image: ghcr.io/cerebralfix/p4p-docker:r25.1
     # P4P command line options
     # https://www.perforce.com/manuals/p4sag/Content/P4SAG/chapter.proxy.html
     command: -v proxy.monitor.level=0
