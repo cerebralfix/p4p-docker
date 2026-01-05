@@ -21,7 +21,7 @@ with compose.yml like the following:
 ```yaml
 services:
   p4p:
-    image: ghcr.io/cerebralfix/p4p-docker:r25.1
+    image: ghcr.io/cerebralfix/p4p-docker:r25.2
     # P4P command line options
     # https://www.perforce.com/manuals/p4sag/Content/P4SAG/chapter.proxy.html
     command: -v proxy.monitor.level=0
