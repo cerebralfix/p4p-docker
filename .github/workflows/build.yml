@@ -12,7 +12,7 @@ permissions:
 env:
   REGISTRY: ghcr.io
   IMAGE: "${{github.repository}}"
-  P4REL: r25.1
+  P4REL: r25.2
 jobs:
   build:
     runs-on: ubuntu-22.04
